@@ -5,6 +5,7 @@
     - add_host:
       args:
         hostname: "{{ deploy.vm_name }}"
+        groups: "provisioned_vm"
     - set_stats:
         data:
           vm_name: "{{ deploy.vm_name }}"
