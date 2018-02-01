@@ -1,2 +1,9 @@
 ---
+- hosts: localhost
+  connection: local
+  tasks:
+    add_host:
+    args:
+      hostname: "{{ vm_name }}"
+
 - import_playbook: "{{ app_name }}.yml"

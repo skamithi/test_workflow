@@ -1,5 +1,12 @@
 ---
-- hosts: "{{ provisioned_vm | default(vm_name) }}"
+- hosts: localhost
+  connection: local
+  tasks:
+    add_host:
+    args:
+      hostname: "{{ vm_name }}"
+
+- hosts: "{{ vm_name }}"
   connection: local # only for demo
   tasks:
     - debug:
