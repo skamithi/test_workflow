@@ -1,7 +1,2 @@
 ---
-- hosts: "{{ vm_name }}"
-  connection: local # only for demo
-  tasks:
-    - debug:
-        msg: "Running third playbook"
-
+- import_playbook: "{{ app_name }}.yml"

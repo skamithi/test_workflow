@@ -1,0 +1,5 @@
+---
+- hosts: "{{ vm_name }}"
+  connection: local # debug only
+  tasks:
+    - debug: msg="run websphere apps on {{ vm_name }}"
