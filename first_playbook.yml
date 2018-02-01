@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  post_tasks:
+    - add_host:
+      args:
+        hostname: "{{ deploy.vm_name }}"
+    - set_stats:
+        data:
+          vm_name: "{{ deploy.vm_name }}"
+  tasks:
+    - debug: msg="run provisioning VM"
+    - set_fact:
+        deploy:
+          vm_name: "server01"

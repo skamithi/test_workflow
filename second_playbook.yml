@@ -1,0 +1,7 @@
+---
+- hosts: "{{ vm_name }}"
+  connection: local # only for demo
+  tasks:
+    - debug:
+        msg: "Running second playbook"
+
